@@ -2,6 +2,9 @@
 let humanScore = 0;
 let computerScore = 0;
 
+const playButton = document.getElementById("play");
+const roundResultMessage = document.getElementById("message");
+
 
 function capitalize(word){
     return word.charAt(0).toUpperCase() + word.slice(1);
@@ -36,11 +39,14 @@ function checkIfWon(currentPlayerChoice, opponentChoice){
 
 function playRound(humanChoice, computerChoice) {
     if(humanChoice.toLowerCase() === computerChoice.toLowerCase()){
+        roundResultMessage.innerHTML = "Its a draw!";
         console.log("Its a draw!")
     }else if(checkIfWon(computerChoice, humanChoice)){
+        roundResultMessage.innerHTML = `You lose!${capitalize(computerChoice)}  beats ${capitalize(humanChoice)}.`;
         console.log(`You lose!${capitalize(computerChoice)}  beats ${capitalize(humanChoice)}.`);
         computerScore++;
     }else if(checkIfWon(humanChoice, computerChoice)){
+        roundResultMessage.innerHTML = `You Win!${capitalize(humanChoice)}  beats ${capitalize(computerChoice)}.`;
         console.log(`You Win!${capitalize(humanChoice)}  beats ${capitalize(computerChoice)}.`);
         humanScore++;
     }
@@ -48,8 +54,10 @@ function playRound(humanChoice, computerChoice) {
 
 function overallWinner(){
     if(humanScore > computerScore){
-            console.log(`You beat the computer!!Your score ${humanScore} to computer score ${computerScore}.`)
+        roundResultMessage.innerHTML = `You beat the computer!!Your score ${humanScore} to computer score ${computerScore}.`;
+        console.log(`You beat the computer!!Your score ${humanScore} to computer score ${computerScore}.`)
     }else{
+        roundResultMessage.innerHTML = `You lost!!Computor score ${computerScore}, your score ${humanScore}.`;        
         console.log(`You lost!!Computor score ${computerScore}, your score ${humanScore}.`)
     }
 }
@@ -74,6 +82,5 @@ function playGame(){
 }
   
 
+document.getElementById("play").addEventListener("click", playGame,true);
   
-
-playGame()
