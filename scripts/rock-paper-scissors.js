@@ -19,6 +19,9 @@ function getHumanChoice(){
     let choice;
     do{
         choice = prompt("Please enter your choice between 'Rock', 'Paper' or 'Scissors'");
+        if(choice == null){
+            return null;
+        }
     }
     while (!['rock', 'paper', 'scissors'].includes(choice.toLowerCase()))
 
@@ -60,6 +63,9 @@ function playGame(){
     while( currentRound < 5){
         const computerSelection = getComputerChoice();
         const humanSelection = getHumanChoice();
+        if(humanSelection === null){
+            break;
+        }
         playRound(humanSelection, computerSelection);
         currentRound++;
     }
