@@ -7,9 +7,30 @@
     <title>Odin - Rock Paper Scissors</title>
 </head>
 <body>
-    <h1>Rock, Paper, Scissors game!!</h1>
-    <button id="play" class="play">Play</button>
-    <p id="message" class="message"></p>
+    <header class="game-header">
+            <h1 class="title">Rock, Paper, Scissors</h1>
+            <p class="welcome">Welcome to the rock, paper, scissors game!!</p>
+    </header>
+
+    <main>
+        <button id="play" class="play">Play</button>
+        <dialog class="game-dialog" open>
+            <div class="round-info">
+                <p class="round">Round: <span class="round-number">1</span></p>
+                <p class="selection">Rocck vs Paper</p>
+                <p class="result">You have lost!Paper beats Rock</p>
+            </div>
+
+            <div class="buttons">
+                <button id="rock" class="rock game-button">Rock</button>
+                <button id="paper" class="paper game-button">Paper</button>
+                <button id="scissors" class="scissors game-button">Scrissors</button>
+            </div>
+
+        </dialog>
+        <p id="message" class="message"></p>
+    </main>
+
     <script src="./scripts/rock-paper-scissors.js"></script>
 </body>
 </html>

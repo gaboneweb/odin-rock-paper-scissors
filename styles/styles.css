@@ -1,3 +1,7 @@
+:root {
+    --header-background : rgb(233, 210, 163, 0.5);
+}
+
 
 * {
     margin : 0;
@@ -5,32 +9,71 @@
     box-sizing: border-box;
 }
 
-
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 100vw;
     height: 100vh;
 }
 
-h1 {
-    font-size: 45px;
+
+.game-header {
+    width: 100%;
+    height: auto;
+    background-color: var(--header-background);
+    text-align: center;
+    padding: 10px 0;
+}
+
+.title {
+    font-size: 2.75rem;
+    font-weight: 900;
+    margin-top: 10px;
 }
 
 
-.play {
-    font-size: 40px;
-    font-weight: bold;
-    padding: 50px 80px;
-    border: none;
-    border-radius: 15px;
-}
-
-
-.message {
-    font-size: 35px;
+.welcome {
     font-style: italic;
+    font-weight: 400;
+}
+
+.round-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex:1;
+}
+
+
+
+.selection {
+    background-color: rgba(255, 255, 255, 0.917);
+    width: 80%;
+    border: 1px solid rgba(192, 192, 192, 0.624);
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.game-dialog{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--header-background);
+    height: 50vh;
+    padding: 20px;
+}
+
+.game-button{
+    padding: 10px 20px;
+}
+
+.round {
+    font-size: 2rem ;
 }
