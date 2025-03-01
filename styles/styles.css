@@ -14,6 +14,31 @@ body {
     width: 100vw;
     height: 100vh;
 }
+main {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.play, .replay, .game-button {
+    padding: 10px 20px;
+    font-weight: 900;
+    border-radius: 5px;
+    border: none;
+}
+
+.play{
+    background-color: rgba(28, 121, 28, 0.57);
+}
+
+
+.replay {
+    background-color: red;
+    display: none;
+}
 
 
 .game-header {
@@ -41,15 +66,45 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    row-gap: 5%;
     flex:1;
+}
+
+.score {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.player-score {
+    color: rgb(29, 223, 29);
+}
+
+.computer-score {
+    color: rgb(221, 7, 7);
 }
 
 
 
 .selection {
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
     background-color: rgba(255, 255, 255, 0.917);
     width: 80%;
     border: 1px solid rgba(192, 192, 192, 0.624);
+    padding: 10%;
+    border-radius: 8px;
+}
+
+
+.result {
+    font-size: 1.75rem;
+    font-weight: 900;
+    font-style: italic;
 }
 
 .buttons {
@@ -57,6 +112,8 @@ body {
     display: flex;
     justify-content: space-around;
     text-align: center;
+    padding-top: 10px;
+    border-top: 5px solid rgba(26, 25, 25, 0.29);
 }
 
 .game-dialog{
@@ -66,14 +123,22 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: var(--header-background);
-    height: 50vh;
+    height: 60vh;
     padding: 20px;
 }
 
-.game-button{
-    padding: 10px 20px;
-}
 
 .round {
     font-size: 2rem ;
+    font-weight: 900;
+}
+
+
+.hide {
+    display: none;
+}
+
+
+.show {
+    display: block;
 }
